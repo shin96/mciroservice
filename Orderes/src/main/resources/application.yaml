@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/orders
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: ORDER-SERVICE
+server:
+  port: 8002
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka
